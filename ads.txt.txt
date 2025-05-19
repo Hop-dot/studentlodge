@@ -1,5 +1,0 @@
-google.com, pub-2430922070906503, DIRECT, f08c47fec0942fa0
-
-<div style="width:100%;height:250px;margin:0 auto;text-align: center;line-height: 250px;color: #000;text-transform: uppercase;font-size: 30px;font-weight: bold;cursor: pointer;border: 5px solid #ccc;box-sizing: border-box;">AD BANNER</div>
-
-<img alt="Advertisement" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrHvveH8X-rs90cUgu3M_l6Gwhh9rnSBjKvJYDvjisuSAH0GmpFjlX13ah9k40SGqZ9yakVTk-TTFuZBAmhoQow1Z3Ry6RB8kDA9M4ECYVIaRjtIQGFvaIISJ2JKKZNK1NjeL_3lU-GC9M/s1600-r/ad728.gif"/>
