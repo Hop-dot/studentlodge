@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do You Really Need XML in 2025?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      line-height: 1.7;
+      background-color: #f9f9f9;
+      color: #222;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 0.8rem;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    code {
+      background-color: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #f3f3f3;
+      padding: 1rem;
+      overflow-x: auto;
+      border-radius: 6px;
+    }
+    blockquote {
+      background: #e3f6f5;
+      border-left: 6px solid #2c3e50;
+      margin: 1rem 0;
+      padding: 1rem;
+      font-style: italic;
+    }
+    .image-box {
+      border: 2px dashed #ccc;
+      padding: 1rem;
+      margin: 2rem 0;
+      text-align: center;
+      background-color: #fff;
+    }
+    .image-box p {
+      font-weight: bold;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .faq-section h4 {
+      margin-top: 1.5rem;
+      color: #1c2b36;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Do You Really Need XML in 2025? When to Use It (and When Not To)</h1>
+
+  <h2>XML in 2025 – Still Relevant or Just Retro?</h2>
+  <p>XML sounds like one of those tech terms from the early 2000s that probably should have stayed there. Maybe you heard about it in class, or saw it pop up when opening some weird-looking file in Notepad. You’re thinking, <em>"Is this something I actually need to know, or is it just another academic concept that won’t help me in real life?"</em> Fair question.</p>
+  <p>In a world of slick apps, JSON APIs, and AI-driven everything, XML feels like an awkward leftover. But here’s the truth: XML hasn’t disappeared. In fact, depending on what you’re doing — especially as a student building projects, dealing with academic data, or working on structured content — XML might quietly be the reliable backbone you didn’t realize you needed.</p>
+  
+  <div class="image-box">
+     <center><strong><em>Image Credit: <a href="https://blog.postman.com/what-is-xml/">PostMan Blog</a></em></strong></center><br>
+    <img src="https://imgur.com/XPsdU1e.png" alt="XML Example Image" width="100%">
+  </div>
+
+  <p>This blog is here to cut through the confusion. We’re not going to bore you with textbook definitions or make you feel bad for not being a full-stack wizard. We’re going to walk through:</p>
+  <ul>
+    <li>What XML is, in plain terms</li>
+    <li>Why it still matters (sometimes)</li>
+    <li>When you should absolutely NOT bother with it</li>
+    <li>How to actually use it without losing your mind</li>
+  </ul>
+
+<br>
+  <!-- SECTION 1 -->
+  <h2>What is XML — and Why Was It Even Invented?</h2>
+  <p>XML (Extensible Markup Language) was born back in 1998 as a way to store and transport data. Think of it like HTML’s older, nerdier cousin. Where HTML tells a browser how to <strong>display</strong> content, XML focuses purely on <strong>describing</strong> content.</p>
+  <pre><code>&lt;student&gt;
+  &lt;name&gt;Lebo Dlamini&lt;/name&gt;
+  &lt;studentID&gt;2025245&lt;/studentID&gt;
+  &lt;course&gt;Information Systems&lt;/course&gt;
+&lt;/student&gt;</code></pre>
+
+  <h3>How Is XML Different from HTML?</h3>
+  <div class="table-container">
+  <style>
+    .table-container {
+      background-color: #F9FAFF;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-container table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      font-family: Rubik, sans-serif;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .table-container thead {
+      background-color: #E9ECF4;
+    }
+    .table-container th,
+    .table-container td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .table-container th {
+      font-weight: 600;
+      font-size: 16px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .table-container td {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    /* Color differentiation */
+    .table-container td:nth-child(2) {
+      color: #d32f2f; /* Red for XML */
+    }
+    .table-container td:nth-child(3) {
+      color: #2e7d32; /* Green for HTML */
+    }
+    .table-container tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* Column Resizing */
+    .resizable {
+      position: relative;
+    }
+    .resizer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      cursor: col-resize;
+      user-select: none;
+      touch-action: none;
+    }
+    .resizer:hover,
+    .resizer:active {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .table-container {
+        padding: 10px;
+      }
+      .table-container th,
+      .table-container td {
+        padding: 10px 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th class="resizable">
+            Feature
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            XML
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            HTML
+            <div class="resizer"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Purpose</strong></td>
+          <td>Data storage and transport</td>
+          <td>Content display in browsers</td>
+        </tr>
+        <tr>
+          <td><strong>2. Custom Tags</strong></td>
+          <td>Yes (you define your own)</td>
+          <td>No (predefined)</td>
+        </tr>
+        <tr>
+          <td><strong>3. Validation</strong></td>
+          <td>Strict, optional schemas</td>
+          <td>Loose structure</td>
+        </tr>
+        <tr>
+          <td><strong>4. Clarity</strong></td>
+          <td>Structured and semantic</td>
+          <td>Visual-oriented</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const resizableTables = document.querySelectorAll('.resizable');
+    
+    resizableTables.forEach(table => {
+      const resizer = table.querySelector('.resizer');
+      let startX, startWidth;
+
+      resizer.addEventListener('mousedown', initResize);
+      resizer.addEventListener('touchstart', initResize);
+
+      function initResize(e) {
+        e.preventDefault();
+        startX = e.clientX || e.touches[0].clientX;
+        startWidth = parseInt(window.getComputedStyle(table).width, 10);
+        document.addEventListener('mousemove', resize);
+        document.addEventListener('touchmove', resize);
+        document.addEventListener('mouseup', stopResize);
+        document.addEventListener('touchend', stopResize);
+      }
+
+      function resize(e) {
+        const currentX = e.clientX || e.touches[0].clientX;
+        const width = startWidth + currentX - startX;
+        table.style.width = `${width}px`;
+      }
+
+      function stopResize() {
+        document.removeEventListener('mousemove', resize);
+        document.removeEventListener('touchmove', resize);
+        document.removeEventListener('mouseup', stopResize);
+        document.removeEventListener('touchend', stopResize);
+      }
+    });
+  });
+</script>
+
+<br>
+  <!-- SECTION 2 -->
+  <h2>The Good Stuff — What XML Still Does Well in 2025</h2>
+  <p>Despite all the tech evolution around us, XML isn’t dead. It’s just matured into a niche role. You might not use it every day, but when you do need it, nothing else does the job quite like XML.</p>
+
+  <h3>Use Cases Where XML Shines:</h3>
+  <ul>
+    <li>University transcripts and reporting systems</li>
+    <li>Android UI layout files</li>
+    <li>Config files for enterprise apps</li>
+    <li>Digital library metadata</li>
+  </ul>
+
+  <blockquote>
+    <strong>Use XML when:</strong><br>
+    - Data needs to be validated<br>
+    - Different platforms must share the same structured dataset<br>
+    - You’re working with legacy academic or public systems
+  </blockquote>
+
+<br>
+  <!-- SECTION 3 -->
+  <h2>Where XML Falls Short (And Why Some Devs Avoid It)</h2>
+  <p>Okay, so XML is structured and dependable. But let’s be real: it can also be... clunky.</p>
+
+  <h3>Cons of XML:</h3>
+  <ul>
+    <li>It’s too verbose</li>
+    <li>Steeper learning curve than JSON</li>
+    <li>Overkill for simple use-cases</li>
+  </ul>
+
+  <pre><code>{
+  "student": {
+    "name": "Lebo Dlamini",
+    "studentID": "2025245",
+    "course": "Information Systems"
+  }
+}</code></pre>
+
+  <p>That’s why JSON is the king when it comes to APIs and light front-end work.</p>
+
+<br>
+  <!-- SECTION 4 -->
+  <h2>XML vs JSON vs HTML — The Student-Friendly Breakdown</h2>
+  <div class="table-container">
+  <style>
+    .table-container {
+      background-color: #F9FAFF;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-container table {
+      width: 100%;
+      min-width: 650px;
+      border-collapse: collapse;
+      font-family: rubik, sans-serif;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .table-container thead {
+      background-color: #E9ECF4;
+    }
+    .table-container th,
+    .table-container td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .table-container th {
+      font-weight: 600;
+      font-size: 16px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .table-container td {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    /* Color differentiation */
+    .table-container td:nth-child(2) {
+      color: #d32f2f; /* Red for XML */
+    }
+    .table-container td:nth-child(3) {
+      color: #1976d2; /* Blue for JSON */
+    }
+    .table-container td:nth-child(4) {
+      color: #2e7d32; /* Green for HTML */
+    }
+    .table-container tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* Column Resizing */
+    .resizable {
+      position: relative;
+    }
+    .resizer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      cursor: col-resize;
+      user-select: none;
+      touch-action: none;
+    }
+    .resizer:hover,
+    .resizer:active {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .table-container {
+        padding: 10px;
+      }
+      .table-container th,
+      .table-container td {
+        padding: 10px 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th class="resizable">
+            Feature
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            XML
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            JSON
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            HTML
+            <div class="resizer"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Use</strong></td>
+          <td>Data transfer</td>
+          <td>Lightweight data exchange</td>
+          <td>Page display</td>
+        </tr>
+        <tr>
+          <td><strong>2. Readability</strong></td>
+          <td>Medium</td>
+          <td>High</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td><strong>3. Custom Tags</strong></td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td><strong>4. API Friendliness</strong></td>
+          <td>Low</td>
+          <td>High</td>
+          <td>None</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const resizableTables = document.querySelectorAll('.resizable');
+    
+    resizableTables.forEach(table => {
+      const resizer = table.querySelector('.resizer');
+      let startX, startWidth;
+
+      resizer.addEventListener('mousedown', initResize);
+      resizer.addEventListener('touchstart', initResize);
+
+      function initResize(e) {
+        e.preventDefault();
+        startX = e.clientX || e.touches[0].clientX;
+        startWidth = parseInt(window.getComputedStyle(table).width, 10);
+        document.addEventListener('mousemove', resize);
+        document.addEventListener('touchmove', resize);
+        document.addEventListener('mouseup', stopResize);
+        document.addEventListener('touchend', stopResize);
+      }
+
+      function resize(e) {
+        const currentX = e.clientX || e.touches[0].clientX;
+        const width = startWidth + currentX - startX;
+        table.style.width = `${width}px`;
+      }
+
+      function stopResize() {
+        document.removeEventListener('mousemove', resize);
+        document.removeEventListener('touchmove', resize);
+        document.removeEventListener('mouseup', stopResize);
+        document.removeEventListener('touchend', stopResize);
+      }
+    });
+  });
+</script>
+
+<br>
+  <!-- SECTION 5 -->
+  <h2>So… Do You Really Need XML in 2025?</h2>
+  <h3>You DO Need XML If You're:</h3>
+  <ul>
+    <li>Working with LMS or e-learning tools</li>
+    <li>Applying for internships that require XML-based resumes</li>
+    <li>Building Android apps</li>
+  </ul>
+
+  <h3>You Don't Need XML If You're:</h3>
+  <ul>
+    <li>Building a basic static website</li>
+    <li>Only using JavaScript for the frontend</li>
+    <li>Not working with structured data</li>
+  </ul>
+
+  <blockquote>
+    “I used XML for my digital CV and it helped me land an internship.” — Naledi, CS Student
+  </blockquote>
+
+<br>
+  <!-- SECTION 6 -->
+  <h2>How to Actually Use XML Today (Without Going Mad)</h2>
+  <p>You don’t need to be a wizard. Here’s the process:</p>
+  <ol>
+    <li>Write content in HTML</li>
+    <li>Paste it into the Student Lodge HTML to XML tool</li>
+    <li>Validate it with an online tool</li>
+    <li>Use or submit your final file</li>
+  </ol>
+
+  <pre><code>&lt;course&gt;
+  &lt;name&gt;Intro to Programming&lt;/name&gt;
+  &lt;code&gt;CS101&lt;/code&gt;
+  &lt;credits&gt;15&lt;/credits&gt;
+&lt;/course&gt;</code></pre>
+
+<br>
+  <!-- SECTION 7 -->
+  <h2>Future of XML — Is It Still Worth Learning?</h2>
+  <p>Yes — especially if you’re in IT, backend development, education systems, or working with enterprise-grade apps.</p>
+  <ul>
+    <li>Android devs use it for layouts</li>
+    <li>It’s common in gov and academic sectors</li>
+    <li>It helps you understand data structuring overall</li>
+  </ul>
+
+<br>
+  <!-- Conclusion -->
+  <h2>Conclusion: XML Isn’t Dead — Just Misunderstood</h2>
+  <p>XML isn’t obsolete. It’s just not the hot topic anymore. For student projects, data-driven apps, and certain industries, XML is still your friend. Know when to use it, and how to use it well.</p>
+  <p>If you’re ever stuck, <strong>use the Student Lodge converter</strong>. That’s what we built it for!</p>
+
+  <!-- Bonus FAQs -->
+  <h2>BONUS: Student FAQs About XML</h2>
+  <div class="faq-section">
+    <h4>Q: Can I open XML files in Word?</h4>
+    <p>A: Yes, but better to use VS Code or Notepad++.</p>
+
+    <h4>Q: Is XML the same as HTML?</h4>
+    <p>A: No. HTML is for web layout, XML is for structured data.</p>
+
+    <h4>Q: Should I learn XML in 2025?</h4>
+    <p>A: If you’re in tech or data fields, yes.</p>
+
+    <h4>Q: What if I just want to make websites?</h4>
+    <p>A: Then focus on HTML, CSS, JS — XML can wait.</p>
+
+    <h4>Q: How do I convert HTML to XML easily?</h4>
+    <p>A: Use our free converter on Student Lodge!</p>
+  </div>
+
+</body>
+</html>

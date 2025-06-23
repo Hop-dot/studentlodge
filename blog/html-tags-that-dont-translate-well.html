@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Tags That Don’t Translate Well to XML (& How to Fix Them)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+      max-width: 850px;
+      margin: auto;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+    pre, code {
+      background-color: #eee;
+      padding: 6px 10px;
+      border-radius: 4px;
+      display: block;
+      white-space: pre-wrap;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 10px;
+      margin: 20px 0;
+      background: #fff;
+    }
+    .boxed-img {
+      border: 2px dashed #ccc;
+      padding: 10px;
+      margin: 20px 0;
+      text-align: center;
+      background-color: #fff;
+    }
+    .boxed-img img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<h1>HTML Tags That Don’t Translate Well to XML (& How to Fix Them)</h1>
+
+<div class="boxed-img">
+  <p>"Here’s a visual example of what not to do when converting HTML to XML:"</p>
+  <img src="https://imgur.com/AYjNJeK.jpg" alt="Broken HTML example" />Image Credit: <a href="https://www.linkedin.com/posts/skillcaptain_html-lets-you-write-broken-code-the-browser-activity-7338085080864649217-sLDg/">Linkedin</a>
+</div>
+<br>
+<p>Let’s be real for a second — converting HTML to XML is one of those things that sounds simple in theory... until it throws 47 errors at you and nothing works. If you’re a student working on an assignment, a portfolio, or maybe even building a cool little tool or website for yourself, these errors can feel like a personal attack. Especially when all you wanted to do was wrap some tags and make it valid. Instead, you’re staring at red error messages, trying to figure out what the heck “attribute value not quoted” even means.</p>
+
+<p>You might have already Googled your error, landed on a bunch of forums or StackOverflow threads, and come away even more confused than when you started. You’re not alone. Most HTML we write for browsers is pretty forgiving — browsers will render even the messiest code without complaint. But XML? XML is like that one professor who takes off marks for every missing period, even if your argument is solid.</p>
+
+<p>This blog post is here to be your guide and your buffer. It won’t just dump definitions or overly technical explanations at you. Instead, we’re walking through the stuff that actually causes issues — the tags, the habits, the quirks — and how to fix them in a way that’s simple, clear, and maybe even a little fun. We’ve also added real-world examples, a handy checklist, and a free tool you can use right now to avoid future XML headaches.</p>
+
+<p>Whether you're trying to pass a class, build something cool, or just figure out why your tags keep breaking the converter, this guide is for you. Let’s get into it and sort this out together.</p>
+
+  <br>
+<h2>🔎1. Understanding the Core Difference Between HTML & XML</h2>
+<h3>1.1 HTML: Forgiving Like That One Chill Lecturer</h3>
+<p>HTML allows some sloppiness. You can forget closing tags, ignore quotes, or mix cases, and browsers will still try to render it.</p>
+
+<pre><code>&lt;img src="image.jpg"&gt;
+&lt;br&gt;
+&lt;input type=text&gt;
+</code></pre>
+
+<h3>1.2 XML: The Strict Professor That Checks Every Semicolon</h3>
+<p>XML has no chill. Everything must be clean, quoted, and nested properly — or nothing works.</p>
+
+<ul>
+  <li>Tags must be closed</li>
+  <li>Attributes must be quoted</li>
+  <li>Case matters</li>
+  <li>Entities must be escaped</li>
+</ul>
+
+  <br>
+<h2>🚫2. The Repeat Offenders – HTML Tags That Break XML</h2>
+
+<h3>2.1 &lt;br&gt;</h3>
+<pre><code>&lt;p&gt;Hello&lt;br&gt;World&lt;/p&gt;</code></pre>
+<p><strong>Fix:</strong></p>
+<pre><code>&lt;p&gt;Hello&lt;br /&gt;World&lt;/p&gt;</code></pre>
+
+<h3>2.2 &lt;img&gt;</h3>
+<pre><code>&lt;img src="logo.png"&gt;</code></pre>
+<p><strong>Fix:</strong></p>
+<pre><code>&lt;img src="logo.png" /&gt;</code></pre>
+
+<h3>2.3 Other Void Elements</h3>
+<div class="table-container">
+  <style>
+    .table-container {
+      background-color: #F9FAFF;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-container table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      font-family: Rubik, sans-serif;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .table-container thead {
+      background-color: #E9ECF4;
+    }
+    .table-container th,
+    .table-container td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .table-container th {
+      font-weight: 600;
+      font-size: 16px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .table-container td {
+      font-size: 15px;
+      line-height: 1.5;
+      font-family: monospace;
+    }
+    .table-container tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* Column Resizing */
+    .resizable {
+      position: relative;
+    }
+    .resizer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      cursor: col-resize;
+      user-select: none;
+      touch-action: none;
+    }
+    .resizer:hover,
+    .resizer:active {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .table-container {
+        padding: 10px;
+      }
+      .table-container th,
+      .table-container td {
+        padding: 10px 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th class="resizable">
+            Tag
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            HTML Version
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            XML-Friendly Version
+            <div class="resizer"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>&lt;hr&gt;</td><td>&lt;hr&gt;</td><td>&lt;hr /&gt;</td></tr>
+        <tr><td>&lt;input&gt;</td><td>&lt;input type="text"&gt;</td><td>&lt;input type="text" /&gt;</td></tr>
+        <tr><td>&lt;meta&gt;</td><td>&lt;meta charset="UTF-8"&gt;</td><td>&lt;meta charset="UTF-8" /&gt;</td></tr>
+        <tr><td>&lt;link&gt;</td><td>&lt;link rel="stylesheet"&gt;</td><td>&lt;link rel="stylesheet" /&gt;</td></tr>
+        <tr><td>&lt;source&gt;</td><td>&lt;source src="audio.mp3"&gt;</td><td>&lt;source src="audio.mp3" /&gt;</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const resizableTables = document.querySelectorAll('.resizable');
+    
+    resizableTables.forEach(table => {
+      const resizer = table.querySelector('.resizer');
+      let startX, startWidth;
+
+      resizer.addEventListener('mousedown', initResize);
+      resizer.addEventListener('touchstart', initResize);
+
+      function initResize(e) {
+        e.preventDefault();
+        startX = e.clientX || e.touches[0].clientX;
+        startWidth = parseInt(window.getComputedStyle(table).width, 10);
+        document.addEventListener('mousemove', resize);
+        document.addEventListener('touchmove', resize);
+        document.addEventListener('mouseup', stopResize);
+        document.addEventListener('touchend', stopResize);
+      }
+
+      function resize(e) {
+        const currentX = e.clientX || e.touches[0].clientX;
+        const width = startWidth + currentX - startX;
+        table.style.width = `${width}px`;
+      }
+
+      function stopResize() {
+        document.removeEventListener('mousemove', resize);
+        document.removeEventListener('touchmove', resize);
+        document.removeEventListener('mouseup', stopResize);
+        document.removeEventListener('touchend', stopResize);
+      }
+    });
+  });
+</script>
+
+<h3>2.4 Unquoted Attributes</h3>
+<pre><code>&lt;input type=text&gt;</code></pre>
+<p><strong>Fix:</strong></p>
+<pre><code>&lt;input type="text" /&gt;</code></pre>
+
+<h3>2.5 Case Sensitivity</h3>
+<pre><code>&lt;Div&gt;&lt;P&gt;Hi&lt;/P&gt;&lt;/Div&gt;</code></pre>
+<p><strong>Fix:</strong></p>
+<pre><code>&lt;div&gt;&lt;p&gt;Hi&lt;/p&gt;&lt;/div&gt;</code></pre>
+
+  <br>
+<h2>🧠3. Common Mistakes Students Make (With Fixes)</h2>
+
+<h3>3.1 Forgetting Closing Tags</h3>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1
+  &lt;li&gt;Item 2
+&lt;/ul&gt;</code></pre>
+
+<p><strong>Fix:</strong></p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+<h3>3.2 Nesting Mistakes</h3>
+<pre><code>&lt;b&gt;&lt;i&gt;text&lt;/b&gt;&lt;/i&gt;</code></pre>
+<p><strong>Fix:</strong></p>
+<pre><code>&lt;b&gt;&lt;i&gt;text&lt;/i&gt;&lt;/b&gt;</code></pre>
+
+<h3>3.3 Using & instead of &amp;amp;</h3>
+<pre><code>&lt;p&gt;Me & You&lt;/p&gt;</code></pre>
+<p><strong>Fix:</strong></p>
+<pre><code>&lt;p&gt;Me &amp;amp; You&lt;/p&gt;</code></pre>
+
+  <br>
+<h2>🔧4. Fixing Your HTML Before Converting to XML</h2>
+
+<h3>4.1 Use a Validator</h3>
+<ul>
+  <li><a href="https://validator.w3.org">W3C HTML Validator</a></li>
+  <li><a href="http://xmlsoft.org/xmllint.html">XMLLint</a></li>
+</ul>
+
+<h3>4.2 Auto-Fix Tools</h3>
+<ul>
+  <li>VS Code + Prettier</li>
+  <li>HTML Tidy</li>
+  <li>Notepad++</li>
+</ul>
+
+<h3>4.3 Manual Checklist</h3>
+<ul>
+  <li>Self-close void elements</li>
+  <li>Quote all attributes</li>
+  <li>Lowercase tag names</li>
+  <li>Escape `&`, `<`, `>`</li>
+  <li>Fix improper nesting</li>
+</ul>
+
+  <br>
+<h2>🧪5. Real Examples From Student Submissions</h2>
+
+<h4>Broken Form</h4>
+<pre><code>&lt;form&gt;
+  &lt;input type=text&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<h4>Fixed:</h4>
+<pre><code>&lt;form&gt;
+  &lt;input type="text" /&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+  <br>
+<h2>💡6. Best Practices Going Forward</h2>
+
+<h3>6.1 Write XML-Friendly HTML From Day One</h3>
+<p>Get into the habit. It’ll save you time and bugs later.</p>
+
+<h3>6.2 Use a Cheatsheet</h3>
+<p>Stick it on your wall or desktop. One glance = fewer errors.</p>
+
+  <br>
+<h2>📁7. Use This Free HTML to XML Converter</h2>
+<p>Use our tool to clean up your HTML and make it XML-ready in one click.</p>
+<p><strong><a href="#">Try the HTML to XML Converter</a></strong></p>
+
+  
+  <br>
+<h2>📚8. Quick Reference Table</h2>
+<div class="table-container">
+  <style>
+    .table-container {
+      background-color: #F9FAFF;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-container table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .table-container thead {
+      background-color: #E9ECF4;
+    }
+    .table-container th,
+    .table-container td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .table-container th {
+      font-weight: 600;
+      font-size: 16px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .table-container td {
+      font-size: 15px;
+      line-height: 1.5;
+      font-family: monospace;
+    }
+    .table-container tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+    /* Highlight fixes in green */
+    .table-container td:nth-child(3) {
+      color: #2e7d32;
+    }
+
+    /* Column Resizing */
+    .resizable {
+      position: relative;
+    }
+    .resizer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      cursor: col-resize;
+      user-select: none;
+      touch-action: none;
+    }
+    .resizer:hover,
+    .resizer:active {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .table-container {
+        padding: 10px;
+      }
+      .table-container th,
+      .table-container td {
+        padding: 10px 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th class="resizable">
+            HTML Tag
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            Problem
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            Fix
+            <div class="resizer"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>&lt;br&gt;</td><td>Not self-closed</td><td>&lt;br /&gt;</td></tr>
+        <tr><td>&lt;img&gt;</td><td>Not self-closed</td><td>&lt;img /&gt;</td></tr>
+        <tr><td>type=text</td><td>Unquoted</td><td>type="text"</td></tr>
+        <tr><td>&lt;Div&gt;</td><td>Capitalization</td><td>&lt;div&gt;</td></tr>
+        <tr><td>&amp;</td><td>Unescaped entity</td><td>&amp;amp;</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const resizableTables = document.querySelectorAll('.resizable');
+    
+    resizableTables.forEach(table => {
+      const resizer = table.querySelector('.resizer');
+      let startX, startWidth;
+
+      resizer.addEventListener('mousedown', initResize);
+      resizer.addEventListener('touchstart', initResize);
+
+      function initResize(e) {
+        e.preventDefault();
+        startX = e.clientX || e.touches[0].clientX;
+        startWidth = parseInt(window.getComputedStyle(table).width, 10);
+        document.addEventListener('mousemove', resize);
+        document.addEventListener('touchmove', resize);
+        document.addEventListener('mouseup', stopResize);
+        document.addEventListener('touchend', stopResize);
+      }
+
+      function resize(e) {
+        const currentX = e.clientX || e.touches[0].clientX;
+        const width = startWidth + currentX - startX;
+        table.style.width = `${width}px`;
+      }
+
+      function stopResize() {
+        document.removeEventListener('mousemove', resize);
+        document.removeEventListener('touchmove', resize);
+        document.removeEventListener('mouseup', stopResize);
+        document.removeEventListener('touchend', stopResize);
+      }
+    });
+  });
+</script>
+
+<h2>🧾 Conclusion: You’re Not Dumb – XML Is Just Petty</h2>
+<p>If you’ve made it all the way here — first of all, major props. This stuff isn’t easy. And second, let’s be honest: it’s not you, it’s XML. Seriously. The rules XML plays by aren’t always intuitive, especially when you’re used to HTML just... working. You’re expected to remember things like self-closing void tags, always quoting attributes, escaping ampersands, and writing everything in lowercase. It’s a lot. But you showed up, and now you know.</p>
+
+<p>Don’t feel bad if your code broke. We’ve all been there — even the people writing this post. The good news? Once you understand the patterns, the problems become easier to spot and fix. You’ll start to write cleaner code from the beginning, and that will pay off big time whether you’re converting HTML to XML, working on Android apps, dealing with RSS feeds, or just trying to impress your lecturer.</p>
+
+<p>So take a breath. You’re not behind. You’re learning. And trust me, you’re already ahead of so many others who gave up after the third XML error. Keep this guide bookmarked, use the converter tool we made for you, and come back any time you hit a wall. You got this.</p>
+
+<p>Now go make something awesome — and make sure those tags are closed properly 😉</p>
+
+
+<h2>💬 FAQ</h2>
+<p><strong>Q:</strong> Can I just use HTML instead of XML?<br/>
+<strong>A:</strong> Not for XML-based systems like RSS or Android. You’ll need valid XML.</p>
+
+<p><strong>Q:</strong> Why does & break everything?<br/>
+<strong>A:</strong> It’s a special character. Use &amp;amp; instead.</p>
+
+<p><strong>Q:</strong> Is there a tool that can clean up my code automatically?<br/>
+<strong>A:</strong> Yes — try our free converter tool linked above.</p>
+
+</body>
+</html>

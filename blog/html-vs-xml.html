@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What’s the Difference Between HTML and XML? (For Beginners)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fff;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    blockquote {
+      border-left: 4px solid #00bcd4;
+      background-color: #e0f7fa;
+      padding: 10px 15px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>What’s the Difference Between HTML and XML? (For Beginners)</h1>
+  <p><strong>From the team at Student Lodge — because no student should be left confused by code.</strong></p>
+
+  <blockquote>
+  <strong>Image Credit: <a href="https://hanamon.kr/htm-xml-%EC%B0%A8%EC%9D%B4%EC%A0%90/">Hanamon</a></strong><br>
+  <img src="https://imgur.com/vC9S2i8.png" alt="HTML vs XML Infographic">
+</blockquote>
+  
+<br>
+  <h2>💬 Been Confused by Code Before? You're Not Alone</h2>
+  <p>Whether you're in a Computer Science course, fiddling with a blog layout, or just trying to submit something through your uni portal, you’ve probably seen weird-looking code blocks with things like <code>&lt;div&gt;</code>, <code>&lt;student&gt;</code>, or even <code>&lt;body&gt;</code>. Some of it works. Some of it breaks. Some of it makes you want to throw your laptop out the res window.</p>
+  <p>You may have heard the terms <strong>HTML</strong> and <strong>XML</strong> tossed around like you’re supposed to know the difference. But you don’t. And no one really explained it in a way that made sense.</p>
+  <p>Well, breathe easy. This article is exactly what you needed back when you first Googled <em>"difference between HTML and XML"</em> at 2AM before a submission. We’re breaking it down like a friend would — no jargon, no tech bro energy. Just real talk.</p>
+  <p>By the end of this post, you’ll:</p>
+  <ul>
+    <li>Know what HTML and XML actually do</li>
+    <li>Understand the key differences</li>
+    <li>Learn when to use each</li>
+    <li>Avoid common beginner mistakes</li>
+    <li>Have mini-projects you can practice with</li>
+    <li>And feel more confident the next time you copy-paste code</li>
+  </ul>
+
+  <!-- Continuation of full article in HTML format -->
+<br>
+  <h2>📘1. What Even Is HTML?</h2>
+  <p>HTML stands for <strong>HyperText Markup Language</strong>. Don’t let the name freak you out. It basically just tells a browser how to <strong>structure and display</strong> content on a webpage.</p>
+
+  <p>Think of HTML as:</p>
+  <ul>
+    <li><strong>A blueprint</strong>: It tells your browser, "Here’s a heading," "Here’s a paragraph," "Insert an image here."</li>
+    <li><strong>Not the designer</strong>: It doesn’t make things pretty — that’s what CSS (Cascading Style Sheets) is for.</li>
+  </ul>
+
+  <h3>✨ Real-Life Analogy</h3>
+  <p>Imagine building a house:</p>
+  <ul>
+    <li>HTML is the skeleton: the walls, floors, roof</li>
+    <li>CSS is the paint, furniture, and decorations</li>
+  </ul>
+
+  <h3>A Simple HTML Example</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Student Lodge&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to Student Lodge!&lt;/h1&gt;
+    &lt;p&gt;This is where students get real answers.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>Where You'll See HTML As a Student</h3>
+  <ul>
+    <li>Blogging platforms like WordPress or Ghost</li>
+    <li>Building a personal portfolio</li>
+    <li>Editing the structure of online forms or projects</li>
+    <li>Inspecting a webpage (Right-click &gt; Inspect)</li>
+  </ul>
+
+  <br>
+  <h2>🗃️2. So Then What Is XML?</h2>
+  <p>XML stands for <strong>eXtensible Markup Language</strong>. And no, it doesn’t display webpages. Instead, it’s all about <strong>organizing, storing, and transporting data</strong>.</p>
+
+  <h3>✨ Real-Life Analogy</h3>
+  <p>You know when you sort your academic files into folders like:</p>
+  <ul>
+    <li>Assignments</li>
+    <li>Notes</li>
+    <li>Past Papers</li>
+  </ul>
+  <p>That’s what XML does — but for <em>data</em>.</p>
+
+  <h3>A Basic XML Example</h3>
+  <pre><code>&lt;student&gt;
+    &lt;name&gt;Thabo Mokoena&lt;/name&gt;
+    &lt;university&gt;UJ&lt;/university&gt;
+    &lt;year&gt;2&lt;/year&gt;
+&lt;/student&gt;</code></pre>
+
+  <h3>Where You'll See XML</h3>
+  <ul>
+    <li>Web forms storing your responses</li>
+    <li>Backend systems that save data</li>
+    <li>File conversions (like your HTML to XML converter!)</li>
+    <li>RSS feeds and mobile apps</li>
+  </ul>
+
+  <br>
+  <h2>🧠3. The Key Differences (Without the Jargon)</h2>
+  <div class="table-container">
+  <style>
+    .table-container {
+      background-color: #F9FAFF;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-container table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .table-container thead {
+      background-color: #E9ECF4;
+    }
+    .table-container th,
+    .table-container td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .table-container th {
+      font-weight: 600;
+      font-size: 16px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .table-container td {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    /* Style for code examples */
+    .table-container td code {
+      font-family: monospace;
+      color: #2e7d32;
+      background: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    .table-container tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+    /* Color differentiation for HTML/XML columns */
+    .table-container td:nth-child(2) {
+      border-left: 2px solid #E9ECF4;
+    }
+    .table-container td:nth-child(3) {
+      border-left: 2px solid #E9ECF4;
+    }
+
+    /* Column Resizing */
+    .resizable {
+      position: relative;
+    }
+    .resizer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      cursor: col-resize;
+      user-select: none;
+      touch-action: none;
+    }
+    .resizer:hover,
+    .resizer:active {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .table-container {
+        padding: 10px;
+      }
+      .table-container th,
+      .table-container td {
+        padding: 10px 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th class="resizable">
+            Feature
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            HTML
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            XML
+            <div class="resizer"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Purpose</strong></td>
+          <td>Display content on web pages</td>
+          <td>Store and structure data</td>
+        </tr>
+        <tr>
+          <td><strong>2. Tags</strong></td>
+          <td>Predefined (e.g., <code>&lt;p&gt;</code>)</td>
+          <td>Custom (e.g., <code>&lt;studentName&gt;</code>)</td>
+        </tr>
+        <tr>
+          <td><strong>3. Strictness</strong></td>
+          <td>Flexible (can have small errors)</td>
+          <td>Very strict (errors break it)</td>
+        </tr>
+        <tr>
+          <td><strong>4. Closing Tags</strong></td>
+          <td>Sometimes optional</td>
+          <td>Always required</td>
+        </tr>
+        <tr>
+          <td><strong>5. Formatting</strong></td>
+          <td>Focuses on layout</td>
+          <td>Focuses on content meaning</td>
+        </tr>
+        <tr>
+          <td><strong>6. Usage</strong></td>
+          <td>Websites, web pages</td>
+          <td>Data exchange, document storage</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const resizableTables = document.querySelectorAll('.resizable');
+    
+    resizableTables.forEach(table => {
+      const resizer = table.querySelector('.resizer');
+      let startX, startWidth;
+
+      resizer.addEventListener('mousedown', initResize);
+      resizer.addEventListener('touchstart', initResize);
+
+      function initResize(e) {
+        e.preventDefault();
+        startX = e.clientX || e.touches[0].clientX;
+        startWidth = parseInt(window.getComputedStyle(table).width, 10);
+        document.addEventListener('mousemove', resize);
+        document.addEventListener('touchmove', resize);
+        document.addEventListener('mouseup', stopResize);
+        document.addEventListener('touchend', stopResize);
+      }
+
+      function resize(e) {
+        const currentX = e.clientX || e.touches[0].clientX;
+        const width = startWidth + currentX - startX;
+        table.style.width = `${width}px`;
+      }
+
+      function stopResize() {
+        document.removeEventListener('mousemove', resize);
+        document.removeEventListener('touchmove', resize);
+        document.removeEventListener('mouseup', stopResize);
+        document.removeEventListener('touchend', stopResize);
+      }
+    });
+  });
+</script>
+
+  <h3>A Practical Example</h3>
+  <p><strong>HTML:</strong></p>
+  <pre><code>&lt;p&gt;This is a paragraph on a blog.&lt;/p&gt;</code></pre>
+  <p><strong>XML:</strong></p>
+  <pre><code>&lt;paragraph&gt;This is a paragraph in a data file.&lt;/paragraph&gt;</code></pre>
+
+  <br>
+  <h2>🎓4. Why Should You Care?</h2>
+  <p>You're probably thinking: "Okay but... why does this matter to me?"</p>
+  <ul>
+    <li>Your <strong>assignments</strong>, especially in IT or web design</li>
+    <li>Using a <strong>converter tool</strong> that transforms HTML into XML</li>
+    <li>Building a <strong>portfolio</strong> for your CV</li>
+    <li>Applying for jobs or internships where knowing this helps</li>
+  </ul>
+
+  <br>
+  <h2>🛠️5. Common Beginner Mistakes</h2>
+  <h3>HTML Mistakes</h3>
+  <ul>
+    <li>Forgetting to close tags</li>
+    <li>Mixing up &lt;div&gt; and &lt;span&gt;</li>
+    <li>Using inline styles instead of CSS</li>
+  </ul>
+
+  <h3>XML Mistakes</h3>
+  <ul>
+    <li>Tags must be <strong>exactly</strong> matched</li>
+    <li>Can’t leave tags open</li>
+    <li>It’s <em>case sensitive</em></li>
+    <li>Quotes are required around values</li>
+  </ul>
+
+  <br>
+  <h2>🤔6. Can HTML and XML Work Together?</h2>
+  <ul>
+    <li><strong>XHTML</strong> — HTML that follows XML rules</li>
+    <li>XML data pulled and displayed using HTML</li>
+    <li><strong>Your Converter Tool</strong> makes them interact!</li>
+  </ul>
+
+  <h3>Real Example</h3>
+  <p>Your online CV can be HTML to display, and exported in XML to send data to a recruiter system.</p>
+
+  <br>
+  <h2>🔧7. Tools You Can Use (No Coding Degree Required)</h2>
+  <ul>
+    <li>Your HTML to XML Converter Tool</li>
+    <li><a href="https://www.w3schools.com/tryit/">W3Schools Online Editor</a></li>
+    <li>VS Code / Notepad++</li>
+    <li>XML Validator</li>
+    <li>Browser Inspect Tools</li>
+  </ul>
+
+  <br>
+  <h2>🧩8. Mini-Projects to Practice</h2>
+  <h3>1. Simple HTML Resume</h3>
+  <pre><code>&lt;h1&gt;Ntombi Ndlovu&lt;/h1&gt;
+&lt;p&gt;Aspiring data scientist based in Durban&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;HTML &amp; CSS&lt;/li&gt;
+  &lt;li&gt;Research Writing&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+  <h3>2. XML File for Your Modules</h3>
+  <pre><code>&lt;modules&gt;
+  &lt;module&gt;
+    &lt;code&gt;COS1511&lt;/code&gt;
+    &lt;name&gt;Intro to Programming&lt;/name&gt;
+  &lt;/module&gt;
+  &lt;module&gt;
+    &lt;code&gt;INF1511&lt;/code&gt;
+    &lt;name&gt;Foundations of Info Systems&lt;/name&gt;
+  &lt;/module&gt;
+&lt;/modules&gt;</code></pre>
+
+  <h3>3. Use the Converter Tool</h3>
+  <p>Take your resume or module list and convert it from HTML to XML. See how the structure transforms.</p>
+
+  <h3>4. Validate Your XML</h3>
+  <p>Use any online validator. Fix the errors. Revalidate. You’ll learn quickly!</p>
+
+  <br>
+  <h2>📚9. Where This Shows Up in the Real World</h2>
+  <ul>
+    <li><strong>Bloggers</strong> use HTML for layout</li>
+    <li><strong>App Developers</strong> use XML for storing app settings</li>
+    <li><strong>News Sites</strong> use RSS feeds (in XML)</li>
+    <li><strong>IT Students</strong> work with both in APIs and databases</li>
+  </ul>
+
+  <br>
+  <h2>📖10. Want to Learn More?</h2>
+  <ul>
+    <li><a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a></li>
+    <li><a href="https://www.w3schools.com/xml/">W3Schools XML Tutorial</a></li>
+    <li><a href="https://www.youtube.com/c/Freecodecamp">FreeCodeCamp YouTube</a></li>
+    <li>Your tool’s own tutorial page</li>
+    <li>Join: Reddit’s r/learnprogramming, Stack Overflow, Discords</li>
+  </ul>
+
+  <br>
+  <h2>🏁 Conclusion: You're Way Ahead Now</h2>
+  <p>If you made it this far, you’re already ahead of most of your class.</p>
+  <p>You now understand:</p>
+  <ul>
+    <li>What HTML and XML are</li>
+    <li>When to use each</li>
+    <li>How they differ</li>
+    <li>Where they show up in real life</li>
+    <li>How not to mess up basic syntax</li>
+  </ul>
+  <p>You don’t need to become a full-time coder. But in a world shaped by tech, <strong>a little knowledge goes a long way</strong>.</p>
+  <p><em>From all of us at Student Lodge — we got you.</em></p>
+
+</body>
+</html>
+
