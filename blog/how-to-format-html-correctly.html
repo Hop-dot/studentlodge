@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Format HTML Correctly Before Converting to XML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      line-height: 1.7;
+      background: #fff;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 20px auto;
+      border: 2px solid #ddd;
+      padding: 8px;
+      background-color: #f9f9f9;
+    }
+    blockquote {
+      background: #f0f0f0;
+      border-left: 5px solid #ccc;
+      padding: 10px 15px;
+      margin: 20px 0;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    code {
+      background: #f2f2f2;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+
+<h1>How to Format HTML Correctly Before Converting to XML</h1>
+  
+  <blockquote>
+  <strong>Image Credit: <a href="https://www.hurix.com/blogs/how-to-convert-html-to-xml-efficiently/">Hurix Digital</a></strong><br>
+  <img src="https://imgur.com/Xj28Eut.png" alt="How to Format HTML Correctly Before Converting to XML">
+</blockquote>
+  
+  <br>
+<h2>You’re Not Alone If Your HTML-to-XML Conversion Keeps Breaking</h2>
+<p>Nothing is more frustrating than spending hours typing out your HTML, pasting it into a converter tool, and watching it completely fail. Maybe the XML result is empty. Maybe it gives you some weird error you don’t understand. Maybe the page just crashes. Whatever it is, it’s enough to make you want to scream into a pillow.</p>
+
+<p>We get it. You’re a student, trying to learn, maybe working on a portfolio project or a simple site for an assignment. You don’t have time to debug like a senior developer. But here’s the truth: most of the time, the issue isn’t the converter. It’s the formatting of your HTML. And the good news? You can totally fix it. You just need to know how.</p>
+
+<p>In this guide, we’ll walk you through everything you need to do to prep your HTML properly so your conversion to XML works smoothly. No fancy jargon. No assumptions. Just straight-up, relatable advice for students trying to make their code behave.</p>
+
+   <br>
+<h2>1. The Basics – Why Formatting HTML Properly Even Matters</h2>
+<h3>HTML vs XML – In Plain Terms</h3>
+<ul>
+  <li><strong>HTML</strong> is forgiving. If you forget a closing tag, it usually still works.</li>
+  <li><strong>XML</strong> is strict. If you mess up one thing, it won’t run.</li>
+</ul>
+
+<p>In HTML, you can write <code>&lt;img src="cat.jpg"&gt;</code> and the browser goes, "Cool, I know what you mean."</p>
+<p>In XML, you write the same thing and it says, "Where is the closing tag? What is this? I quit."</p>
+
+<h3>Why This Affects You</h3>
+<p>Your conversion tool takes your HTML and tries to turn it into something XML can understand. But if your code is messy, incomplete, or just plain wrong, the tool throws its hands in the air and gives up. That’s why formatting matters. Clean HTML = Successful XML.</p>
+  
+  <br>
+<h2>2. Common Mistakes Students Make When Pasting HTML</h2>
+<ul>
+  <li><strong>❌ Missing Closing Tags:</strong> Tags like <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code> must have a matching <code>&lt;/div&gt;</code>, <code>&lt;/p&gt;</code>.</li>
+  <li><strong>❌ Improper Nesting:</strong> Always close the most recently opened tag first.
+    <br><em>Wrong:</em> <code>&lt;b&gt;&lt;i&gt;Bold and Italic&lt;/b&gt;&lt;/i&gt;</code><br>
+    <em>Right:</em> <code>&lt;b&gt;&lt;i&gt;Bold and Italic&lt;/i&gt;&lt;/b&gt;</code></li>
+  <li><strong>❌ Attributes Not in Quotes:</strong> <br>
+    <em>Wrong:</em> <code>&lt;input type=text&gt;</code><br>
+    <em>Right:</em> <code>&lt;input type="text"&gt;</code>
+  </li>
+  <li><strong>❌ Ampersands Not Escaped:</strong> Use <code>&amp;amp;</code> instead of <code>&</code>.</li>
+  <li><strong>❌ Self-Closing Tags Not Self-Closed:</strong> Use <code>&lt;br /&gt;</code> instead of <code>&lt;br&gt;</code>.</li>
+</ul>
+
+   <br>
+<h2>3. Tools That Can Help You Clean Up Your HTML First</h2>
+<ul>
+  <li><strong>🧰 Browser DevTools:</strong> Use inspect tool → copy → paste clean version.</li>
+  <li><strong>🧰 W3C Validator:</strong> <a href="https://validator.w3.org/">validator.w3.org</a></li>
+  <li><strong>🧰 VS Code Extensions:</strong> “Prettier” and “HTMLHint” for formatting help.</li>
+  <li><strong>🧰 HTML Tidy:</strong> <a href="https://infohound.net/tidy/">infohound.net/tidy</a></li>
+  <li><strong>⚠️ Avoid Word/Google Docs:</strong> Use plain code editors only.</li>
+</ul>
+
+<h2>4. Step-by-Step: How to Prepare HTML Before Using the Tool</h2>
+<ol>
+  <li><strong>Paste into a proper code editor:</strong> like VS Code or an online HTML editor.</li>
+  <li><strong>Validate It:</strong> Use a validator to scan for common issues.</li>
+  <li><strong>Add Basic HTML Structure:</strong>
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Your content --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+  </li>
+  <li><strong>Close All Tags:</strong> Every tag must be opened and closed correctly.</li>
+  <li><strong>Use lowercase:</strong> XML is case-sensitive.</li>
+  <li><strong>Quote all attributes:</strong> No exceptions.</li>
+  <li><strong>Escape characters:</strong> like <code>&amp;</code>, <code>&lt;</code>, and <code>&gt;</code>.</li>
+  <li><strong>Avoid deprecated elements:</strong> like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</li>
+</ol>
+
+   <br>
+<h2>5. Real-World Student Examples (Before & After)</h2>
+<h3>Example 1: Portfolio Page</h3>
+<pre><code>// Before:
+&lt;h1&gt;Welcome to My Portfolio
+&lt;p&gt;Here are my projects.
+
+// After:
+&lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
+&lt;p&gt;Here are my projects.&lt;/p&gt;
+</code></pre>
+
+<h3>Example 2: Class Timetable</h3>
+<pre><code>// Before:
+&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Math&lt;td&gt;8AM
+
+// After:
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Math&lt;/td&gt;
+    &lt;td&gt;8AM&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+  
+   <br>
+<h2>6. What Happens If You Skip Formatting?</h2>
+<ul>
+  <li>Blank XML outputs</li>
+  <li>Gibberish characters</li>
+  <li>Broken layout or missing elements</li>
+  <li>Failed conversion and tool errors</li>
+</ul>
+
+<h2>7. Helpful Tags to Use for XML Conversion</h2>
+<div class="table-container">
+  <style>
+    .table-container {
+      background-color: #F9FAFF;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .table-container table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      font-family: rubik, sans-serif;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .table-container thead {
+      background-color: #E9ECF4;
+    }
+    .table-container th,
+    .table-container td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .table-container th {
+      font-weight: 600;
+      font-size: 16px;
+      white-space: nowrap;
+      position: relative;
+    }
+    .table-container td {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .table-container td:first-child {
+      font-family: rubik;
+      color: #2e7d32; /* Green color for tags */
+    }
+    .table-container tbody tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    /* Column Resizing */
+    .resizable {
+      position: relative;
+    }
+    .resizer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      cursor: col-resize;
+      user-select: none;
+      touch-action: none;
+    }
+    .resizer:hover,
+    .resizer:active {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .table-container {
+        padding: 10px;
+      }
+      .table-container th,
+      .table-container td {
+        padding: 10px 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th class="resizable">
+            Tag
+            <div class="resizer"></div>
+          </th>
+          <th class="resizable">
+            Purpose
+            <div class="resizer"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>&lt;section&gt;</td><td>Groups related content</td></tr>
+        <tr><td>&lt;article&gt;</td><td>Standalone content blocks</td></tr>
+        <tr><td>&lt;nav&gt;</td><td>Navigation menus</td></tr>
+        <tr><td>&lt;header&gt;</td><td>Top sections or headings</td></tr>
+        <tr><td>&lt;footer&gt;</td><td>Bottom or end sections</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const resizableTables = document.querySelectorAll('.resizable');
+    
+    resizableTables.forEach(table => {
+      const resizer = table.querySelector('.resizer');
+      let startX, startWidth;
+
+      resizer.addEventListener('mousedown', initResize);
+      resizer.addEventListener('touchstart', initResize);
+
+      function initResize(e) {
+        e.preventDefault();
+        startX = e.clientX || e.touches[0].clientX;
+        startWidth = parseInt(window.getComputedStyle(table).width, 10);
+        document.addEventListener('mousemove', resize);
+        document.addEventListener('touchmove', resize);
+        document.addEventListener('mouseup', stopResize);
+        document.addEventListener('touchend', stopResize);
+      }
+
+      function resize(e) {
+        const currentX = e.clientX || e.touches[0].clientX;
+        const width = startWidth + currentX - startX;
+        table.style.width = `${width}px`;
+      }
+
+      function stopResize() {
+        document.removeEventListener('mousemove', resize);
+        document.removeEventListener('touchmove', resize);
+        document.removeEventListener('mouseup', stopResize);
+        document.removeEventListener('touchend', stopResize);
+      }
+    });
+  });
+</script>
+
+<h3>Avoid Inline Event Handlers</h3>
+<p>Instead of using <code>onclick="..."</code>, use unobtrusive JS or keep it outside the HTML you're converting.</p>
+
+<h2>8. Keeping Your HTML Mobile-Friendly Too</h2>
+<ul>
+  <li>Include <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
+  <li>Use relative widths (like <code>%</code> or <code>em</code>) instead of fixed <code>px</code></li>
+  <li>Avoid layout tables unless you're showing data</li>
+</ul>
+
+   <br>
+<h2>FAQ – Quick Fixes for Common Errors in the Tool</h2>
+<ul>
+  <li><strong>Why is my XML result blank?</strong> – Usually due to broken tags or nesting issues.</li>
+  <li><strong>What does “well-formed” mean?</strong> – Your HTML follows strict structure and syntax rules.</li>
+  <li><strong>Can I convert HTML with CSS/JS?</strong> – Avoid JS. Inline CSS is okay, but keep it minimal.</li>
+  <li><strong>Best way to test before converting?</strong> – Paste in a browser, then into the validator.</li>
+  <li><strong>Where can I learn more?</strong> – Visit <a href="https://developer.mozilla.org/">MDN Web Docs</a> or <a href="https://www.w3schools.com/">W3Schools</a>.</li>
+</ul>
+
+<h2>Conclusion: Formatting HTML Isn’t Just for “Techies” — It’s a Student Survival Skill</h2>
+<p>Clean code doesn’t just help your XML tool work. It makes your work easier to read, debug, and show off. You don’t need to be an expert — just careful and willing to test.</p>
+
+<p>Mistakes are part of learning. What matters is that you keep going, and now you know how to clean things up when they don’t work the first time.</p>
+
+<p><strong>Ready to try your HTML now?</strong> Head over to the Student Lodge HTML to XML Tool and give it a spin — you’ve got this!</p>
+
+</body>
+</html>
